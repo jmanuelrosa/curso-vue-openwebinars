@@ -21,7 +21,7 @@
   import CoLogo from '@/components/CoLogo'
   import CoSearch from '@/components/CoSearch'
   import CoBookmarks from '@/components/CoBookmarks'
-  import CoDevelopers from '@/components/CoDevelopers'
+  // import CoDevelopers from '@/components/CoDevelopers'
 
   export default {
     name: 'CoApp',
@@ -34,7 +34,7 @@
       CoLogo,
       CoSearch,
       CoBookmarks,
-      CoDevelopers
+      CoDevelopers: () => import('@/components/CoDevelopers')
     }
   }
 </script>
