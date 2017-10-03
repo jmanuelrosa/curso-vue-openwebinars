@@ -16,6 +16,8 @@
 </template>
 
 <script>
+  import http from 'axios'
+
   import CoDeveloper from '@/components/CoDeveloper'
 
   export default {
@@ -33,26 +35,29 @@
     },
     methods: {
       getTopUsers () {
-        return fetch(
-          `${process.env.API}search/users?q=language:javascript&order=desc&per_page=15`,
-          {
-            headers: {
-              'Authorization': `token ${process.env.TOKEN}`
-            }
+        return http({
+          method: 'GET',
+          url: `${process.env.API}search/users`,
+          params: {
+            q: 'language:javascript',
+            order: 'desc',
+            per_page: 15
+          },
+          headers: {
+            'Authorization': `token ${process.env.TOKEN}`
           }
-        )
-          .then(response => response.json())
+        })
+          .then(response => response.data)
           .then(response => response.items)
           .then(users => users.map(user =>
-            fetch(
-              `${process.env.API}users/${user.login}`,
-              {
-                headers: {
-                  'Authorization': `token ${process.env.TOKEN}`
-                }
+            http({
+              method: 'GET',
+              url: `${process.env.API}users/${user.login}`,
+              headers: {
+                'Authorization': `token ${process.env.TOKEN}`
               }
-            )
-              .then(response => response.json())
+            })
+              .then(response => response.data)
           ))
           .then(response => Promise.all(response))
           .then(users => {
