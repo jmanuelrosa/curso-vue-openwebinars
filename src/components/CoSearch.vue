@@ -10,6 +10,8 @@
 </template>
 
 <script>
+  import bus from '@/busdata.js'
+
   export default {
     name: 'CoSearch',
     data () {
@@ -19,12 +21,12 @@
     },
     watch: {
       criteria () {
-        this.$emit('search', this.criteria)
+        // this.$emit('search', this.criteria)
+        bus.$emit('search', this.criteria)
       }
     }
   }
 </script>
 
 <style lang='css'>
-
 </style>

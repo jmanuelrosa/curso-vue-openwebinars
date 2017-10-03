@@ -7,6 +7,8 @@
 </template>
 
 <script>
+  import bus from '@/busdata.js'
+
   export default {
     name: 'CoDevelopers',
     data () {
@@ -16,6 +18,11 @@
     },
     mounted () {
       console.log('CoDeveloper mounted')
+    },
+    created () {
+      bus.$on('search', criteria => {
+        console.log('CoDevelopers', criteria)
+      })
     }
   }
 </script>
