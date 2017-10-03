@@ -16,22 +16,49 @@
 </template>
 
 <script>
-  import mocks from '@/mocks/users.js'
-
   import CoDeveloper from '@/components/CoDeveloper'
 
   export default {
     name: 'CoDevelopers',
     data () {
       return {
-        users: mocks
+        users: []
       }
     },
     components: {
       CoDeveloper
     },
     mounted () {
-      console.log('CoDeveloper mounted')
+      this.getTopUsers()
+    },
+    methods: {
+      getTopUsers () {
+        return fetch(
+          `${process.env.API}search/users?q=language:javascript&order=desc&per_page=15`,
+          {
+            headers: {
+              'Authorization': `token ${process.env.TOKEN}`
+            }
+          }
+        )
+          .then(response => response.json())
+          .then(response => response.items)
+          .then(users => users.map(user =>
+            fetch(
+              `${process.env.API}users/${user.login}`,
+              {
+                headers: {
+                  'Authorization': `token ${process.env.TOKEN}`
+                }
+              }
+            )
+              .then(response => response.json())
+          ))
+          .then(response => Promise.all(response))
+          .then(users => {
+            this.users = users
+          })
+      }
     }
   }
 </script>

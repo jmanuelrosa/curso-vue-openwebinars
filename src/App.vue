@@ -8,15 +8,9 @@
 
   export default {
     name: 'CoApp',
-    data () {
-      return {
-        show: false
-      }
-    },
     methods: {
       onSearch (searchCriteria) {
         console.log('Search ', searchCriteria)
-        this.show = true
       }
     },
     components: {
