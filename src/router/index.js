@@ -15,10 +15,9 @@ export default new Router({
       component: CoDevelopers
     },
     {
-      path: '/profile/:user',
+      path: '/profile',
       name: 'profile',
-      component: CoProfile,
-      props: true
+      component: CoProfile
     }
   ]
 })

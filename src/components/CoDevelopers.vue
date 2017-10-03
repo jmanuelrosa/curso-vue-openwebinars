@@ -2,7 +2,7 @@
   <ul class="developers">
     <li v-for='user in users' class="developers__item">
       <router-link
-        v-bind:to="{ name: 'profile', params: { user: user.login } }"
+        v-bind:to="{ name: 'profile' }"
       >
         <co-developer
           v-bind:avatar='user.avatar_url'

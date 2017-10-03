@@ -49,8 +49,6 @@
 </template>
 
 <script>
-  import axios from 'axios'
-
   import CoGoToHome from '@/components/CoGoToHome'
   import CoSocial from '@/components/CoSocial'
   import CoEvents from '@/components/CoEvents'
@@ -93,15 +91,7 @@
     },
     methods: {
       getUserData () {
-        return axios({
-          method: 'GET',
-          url: `${process.env.API}users/${this.user}`,
-          headers: { 'Authorization': `token ${process.env.TOKEN}` }
-        })
-          .then(response => response.data)
-          .then(user => {
-            this.info = user
-          })
+        console.log('getUserData')
       }
     }
   }
