@@ -6,4 +6,5 @@
     main.content
       header.content__header
         co-logo
-      co-developers
+      transition(name='openwebinars' v-if='show')
+        co-developers

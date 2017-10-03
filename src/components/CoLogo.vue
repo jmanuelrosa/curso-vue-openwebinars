@@ -1,5 +1,5 @@
 <template lang='html'>
-  <h1 class='logo'>{{ appName | upper | capitalize }}</h1>
+  <h1 class='logo'>{{ appName | capitalize }}</h1>
 </template>
 
 <script>
@@ -11,14 +11,6 @@
       }
     },
     filters: {
-      upper (value) {
-        console.log('upper')
-        if (!value) {
-          return ''
-        }
-
-        return value.toUpperCase()
-      },
       capitalize (value) {
         if (!value) {
           return ''

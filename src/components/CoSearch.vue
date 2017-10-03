@@ -11,8 +11,6 @@
 </template>
 
 <script>
-  import bus from '@/busdata.js'
-
   export default {
     name: 'CoSearch',
     data () {
@@ -22,8 +20,7 @@
     },
     methods: {
       onSearch () {
-        // this.$emit('search', this.criteria)
-        bus.$emit('search', this.criteria)
+        this.$emit('search', this.criteria)
       }
     }
   }

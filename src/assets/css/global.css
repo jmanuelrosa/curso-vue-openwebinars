@@ -54,3 +54,10 @@ input:focus {
   background-color: var(--color-white);
   color: var(--color-blue);
 }
+
+.openwebinars-enter-active, .openwebinars-leave-active {
+  transition: opacity 4s
+}
+.openwebinars-enter, .openwebinars-leave-to {
+  opacity: 0
+}
