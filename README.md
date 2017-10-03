@@ -44,7 +44,7 @@ A new way to discover Github! Busca y encuentra al usuario que desees en Github,
   9. [Data y Props](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/09-data-y-props)
   10. [Computed properties y watchers](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/10-computed-properties-y-watchers)
   11. [Ciclo de vida](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/11-ciclo-de-vida)
-  12. [Comunicación entre componentes](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/12-comunicacion-entre-componentes)
+  12. Comunicación entre componentes
   13. [Bus de eventos__](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/13-bus-de-eventos)
   14. [Componentes asíncronos](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/14-componentes-asincronos)
 
