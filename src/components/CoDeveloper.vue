@@ -6,11 +6,7 @@
         <span class='developer__name'>{{ name }}</span>
          <span class='developer__login'>[{{ login }}]</span>
       </h2>
-      <div class='developer__metadata'>
-        <span class='developer__data'>{{ email }}</span>
-        <span class='developer__data'>{{ location }}</span>
-        <span class='developer__data'>{{ company }}</span>
-      </div>
+      <div class='developer__metadata'>{{ metadata }}</div>
     </div>
     <div class='developer__stats'>
       <div class='developer__stat'>
@@ -27,7 +23,62 @@
 
 <script>
   export default {
-    name: 'CoDeveloper'
+    name: 'CoDeveloper',
+    props: {
+      avatar: {
+        type: String,
+        required: true,
+        validator (value) {
+          return value.starsWith('http')
+        },
+      },
+      name: {
+        type: String,
+        required: true,
+      },
+      login: {
+        type: String,
+        required: true,
+      },
+      email: {
+        type: String,
+        required: true
+      },
+      company: {
+        type: String,
+        required: false
+      },
+      respos: {
+        type: Number
+      },
+      gists: {
+        type: Number
+      }
+    },
+    computed: {
+      metadata () {
+        let meta = ''
+
+        if (this.email) {
+          meta = `${meta} ${this.email}`
+        }
+
+        if (this.location) {
+          meta = `${meta} ${this.location}`
+        }
+
+        if (this.company) {
+          meta = `${meta} ${this.company}`
+        }
+
+        return meta
+      }
+    },
+    watch: {
+      metadata (newValue) {
+        console.log('Metadata:', newValue)
+      }
+    }
   }
 </script>
 

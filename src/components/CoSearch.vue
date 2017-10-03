@@ -10,7 +10,12 @@
 
 <script>
   export default {
-    name: 'CoSearch'
+    name: 'CoSearch',
+    data() {
+      return {
+        criteria: ''
+      }
+    }
   }
 </script>
 
