@@ -15,93 +15,93 @@
 </template>
 
 <script>
-import axios from 'axios'
+  import axios from 'axios'
 
-export default {
-  name: 'CoEvents',
-  props: {
-    user: {
-      type: String,
-      required: true
-    }
-  },
-  data() {
-    return {
-      events: []
-    }
-  },
-  computed: {
-    commits() {
-      return this.events
-        .filter(item => item.type === 'PushEvent')
-        .length
+  export default {
+    name: 'CoEvents',
+    props: {
+      user: {
+        type: String,
+        required: true
+      }
     },
-    issues() {
-      return this.events
-        .filter(item => item.type === 'IssuesEvent')
-        .length
+    data () {
+      return {
+        events: []
+      }
     },
-    pr() {
-      return this.events
-        .filter(item => item.type === 'PullRequestEvent')
-        .length
-    }
-  },
-  created() {
-    this.getUserEvents()
-  },
-  methods: {
-    getUserEvents() {
-      return axios({
-        method: 'GET',
-        url: `${process.env.API}users/${this.user}/events/public`,
-        headers: { 'Authorization': `token ${process.env.TOKEN}` }
-      })
-        .then(response => response.data)
-        .then(events => {
-          this.events = events
+    computed: {
+      commits () {
+        return this.events
+          .filter(item => item.type === 'PushEvent')
+          .length
+      },
+      issues () {
+        return this.events
+          .filter(item => item.type === 'IssuesEvent')
+          .length
+      },
+      pr () {
+        return this.events
+          .filter(item => item.type === 'PullRequestEvent')
+          .length
+      }
+    },
+    created () {
+      this.getUserEvents()
+    },
+    methods: {
+      getUserEvents () {
+        return axios({
+          method: 'GET',
+          url: `${process.env.API}users/${this.user}/events/public`,
+          headers: { 'Authorization': `token ${process.env.TOKEN}` }
         })
+          .then(response => response.data)
+          .then(events => {
+            this.events = events
+          })
+      }
     }
   }
-}
 </script>
 
 <style lang='css' scoped>
-@import '../assets/css/mixins.css';
-@import '../assets/css/colors.css';
+  @import '../assets/css/mixins.css';
+  @import '../assets/css/colors.css';
 
-.events {
-  margin: 1rem 0;
+  .events {
+    margin: 1rem 0;
 
-  & .events__title {
-    color: var(--color-black);
+    & .events__title {
+      color: var(--color-black);
+    }
+
+    & .events__items {
+      @apply --flex-row;
+      justify-content: space-around;
+    }
+
+    & .events__item {
+      margin-top: 1rem;
+      padding: 1rem;
+      min-width: 33%;
+
+      border-right: 1px solid var(--color-black);
+      text-align: center;
+    }
+
+    & .events__item:last-child {
+      border-right: none;
+    }
+
+    & .events__name {
+      color: var(--color-black);
+      font-size: .7rem;
+    }
+
+    & .events__total {
+      font-size: 1.5rem;
+    }
   }
-
-  & .events__items {
-    @apply --flex-row;
-    justify-content: space-around;
-  }
-
-  & .events__item {
-    margin-top: 1rem;
-    padding: 1rem;
-    min-width: 33%;
-
-    border-right: 1px solid var(--color-black);
-    text-align: center;
-  }
-
-  & .events__item:last-child {
-    border-right: none;
-  }
-
-  & .events__name {
-    color: var(--color-black);
-    font-size: .7rem;
-  }
-
-  & .events__total {
-    font-size: 1.5rem;
-  }
-}
 </style>

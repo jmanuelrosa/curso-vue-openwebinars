@@ -1,16 +1,20 @@
 <template lang='html'>
   <ul class="developers">
     <li v-for='user in users' class="developers__item">
-      <co-developer
-        v-bind:avatar='user.avatar_url'
-        v-bind:name='user.name'
-        v-bind:login='user.login'
-        v-bind:email='user.email'
-        v-bind:location='user.location'
-        v-bind:company='user.company'
-        v-bind:repos='user.public_repos'
-        v-bind:gists='user.public_gists'
-      ></co-developer>
+      <router-link
+        v-bind:to="{ name: 'profile', params: { user: user.login } }"
+      >
+        <co-developer
+          v-bind:avatar='user.avatar_url'
+          v-bind:name='user.name'
+          v-bind:login='user.login'
+          v-bind:email='user.email'
+          v-bind:location='user.location'
+          v-bind:company='user.company'
+          v-bind:repos='user.public_repos'
+          v-bind:gists='user.public_gists'
+        ></co-developer>
+      </router-link>
     </li>
   </ul>
 </template>

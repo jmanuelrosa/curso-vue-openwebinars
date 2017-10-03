@@ -22,7 +22,7 @@ export default {
     }
   },
   computed: {
-    styleObject() {
+    styleObject () {
       return {
         backgroundColor: this.color,
         boxShadow: `0 0 10px ${this.color}`

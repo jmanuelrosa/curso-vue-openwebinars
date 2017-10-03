@@ -1,6 +1,6 @@
 <template lang='pug'>
   router-link.go-home(
-        v-bind:to='{ name: "home" }'
+    v-bind:to='{ name: "home" }'
   )
     include ../assets/images/back.svg
 </template>
