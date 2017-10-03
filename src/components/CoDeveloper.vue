@@ -1,24 +1,24 @@
-<template lang='html'>
-  <div class='developer'>
-    <img v-bind:src='avatar' class='developer__avatar'/>
-    <div class='developer__info'>
-      <h2>
-        <span class='developer__name'>{{ name }}</span>
-         <span class='developer__login'>[{{ login }}]</span>
-      </h2>
-      <div class='developer__metadata'>{{ metadata }}</div>
-    </div>
-    <div class='developer__stats'>
-      <div class='developer__stat repos' v-if='repos'>
-        <div class='developer__icon'></div>
-        <div class='developer__total'>{{ repos }}</div>
-      </div>
-      <div class='developer__stat gists' v-show='gists'>
-        <div class='developer__icon'></div>
-        <div class='developer__total'>{{ gists }}</div>
-      </div>
-    </div>
-  </div>
+<template lang='pug'>
+  .developer
+    img.developer__avatar(v-bind:src='avatar')
+    .developer__info
+      h2
+        span.developer__name {{ name }}
+        =' '
+        span.developer__login [{{ login }}]
+      .developer__metadata
+        span.developer__data {{ metadata }}
+    .developer__stats
+      .developer__stat(v-show='repos')
+        .developer__icon
+          include ../assets/images/github.svg
+        =' '
+        .developer__total {{ repos }}
+      .developer__stat(v-show='gists')
+        .developer__icon
+          include ../assets/images/gist.svg
+        =' '
+        .developer__total {{ gists }}
 </template>
 
 <script>
