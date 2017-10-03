@@ -1,0 +1,37 @@
+# Project Directories
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor's files
+*.sublime-*
+.idea
+.project
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Node Directories/Files
+.nyc_output
+.lock-wscript
+.node_repl_history
+.npm
+
+# node-waf configuration
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Generic Files
+.DS_Store
+pids
+*.out
+*.pid
+*.seed
+*.swp
+*.swo

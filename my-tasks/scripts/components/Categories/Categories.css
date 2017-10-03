@@ -1,0 +1,33 @@
+.categories__empty {
+  padding: 1rem;
+
+  text-align: center;
+  font-size: .8rem;
+  color: #ff9898;
+}
+
+.categories__category {
+  transition: all .6s;
+}
+
+.categories__category:hover,
+.categories__category--selected {
+  background-color: #fff;
+
+}
+
+.categories__link {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+}
+
+.categories__category:hover .categories__link,
+.categories__category--selected .categories__link {
+  color: #384850;
+}

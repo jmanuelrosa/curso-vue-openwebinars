@@ -1,0 +1,36 @@
+.wrapper {
+  padding: 1rem;
+}
+
+.container {
+  flex-direction: row;
+
+  max-width: 900px;
+  min-width: 400px;
+  max-height: 600px;
+  min-height: 300px;
+
+  padding: 1rem;
+}
+
+.menu {
+  order: 1;
+}
+
+.menu__options {
+  flex: 1;
+}
+
+.main {
+  order: 1;
+}
+
+.credits {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.credits__profile, .credits__name {
+  font-weight: 700;
+}

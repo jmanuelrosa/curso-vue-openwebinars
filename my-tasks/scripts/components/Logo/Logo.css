@@ -1,0 +1,23 @@
+.logo {
+  position: relative;
+  margin: 1rem;
+
+  color: #fcfcfc;
+
+  font-size: 2rem;
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+}
+
+.logo::before {
+  content: '';
+
+  position: absolute;
+  bottom: 50%;
+  left: 10%;
+
+  width: 30%;
+  height: 1px;
+
+  background-color: #fcfcfc;
+}

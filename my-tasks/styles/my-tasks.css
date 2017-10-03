@@ -1,0 +1,95 @@
+html, body  {
+  width: 100vw;
+  height: 100vh;
+}
+
+a, a:link, a:hover {
+  color: #384850;
+}
+
+body {
+  background: linear-gradient(to right, #FE7B6A 0%, #FF987C 100%);
+  background-color: #FE7B6A;
+
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+::placeholder {
+  font-family: 'Lato', sans-serif;
+  font-size: .8rem;
+  color: #D0D4D6;
+}
+
+
+input,
+select {
+  box-shadow: none;
+  box-sizing: border-box;
+
+  margin: .5rem;
+
+  background-color: #43545c;
+  color: #b2b7b9;
+  font-size: .8rem;
+
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+}
+
+input {
+  padding: .5rem 2rem;
+}
+
+input:focus {
+  color: #43545c;
+  background-color: #fff;
+}
+
+select {
+  padding: .5rem 1rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 1px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  order: 2;
+  flex-direction: column;
+
+  background-color: #384850;
+}
+
+.main {
+  display: flex;
+  order: 1;
+  flex: 1;
+}
+
+.credits {
+  font-size: .8rem;
+}
+
+.credits__profile, .credits__name {
+  font-weight: 700;
+}

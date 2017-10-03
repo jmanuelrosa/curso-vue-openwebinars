@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+
+  <link rel='icon' href='./favicon.ico'>
+
+  <link rel='stylesheet' href='./styles/reset.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:100,400,700'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Indie+Flower'>
+  <link rel='stylesheet' href='./styles/my-tasks.css'>
+  <link rel='stylesheet' media='(min-width: 40em)' href='./styles/my-tasks.wide.css'>
+  <link rel='stylesheet' href='./scripts/components/Logo/Logo.css'>
+  <link rel='stylesheet' href='./scripts/components/Categories/Categories.css'>
+  <link rel='stylesheet' href='./scripts/components/Add/Add.css'>
+  <link rel='stylesheet' href='./scripts/components/Todo/Todo.css'>
+
+  <title>My Tasks</title>
+</head>
+
+<body>
+  <div class='wrapper'>
+    <div id='myTasks' class='container'>
+      <aside class='menu'>
+        <div class='menu__options'>
+          <mt-logo></mt-logo>
+          <mt-categories v-bind:categories='categories' v-bind:selected='selected' v-on:category:new='userSelect'></mt-categories>
+        </div>
+        <mt-add v-bind:categories='categories' v-on:add:save='createNewTask'></mt-add>
+      </aside>
+      <section class='main'>
+        <mt-todo v-bind:category='title' v-bind:tasks='tasks' v-on:task:remove='removeTask' v-on:task:strike='strikeTask'></mt-todo>
+      </section>
+    </div>
+
+    <p class='credits'>© Design based on
+      <a class='credits__profile' href='https://dribbble.com/shots/3746021-Reminder-UI-Design' target='_blank'>Design</a>      by
+      <a class='credits__name' href='https://dribbble.com/ildiesign' target='_blank'>@ildiesign</a>
+    </p>
+  </div>
+
+  <script src='https://unpkg.com/vue'></script>
+  <script src='./scripts/components/Logo/Logo.js'></script>
+  <script src='./scripts/components/Categories/Categories.js'></script>
+  <script src='./scripts/components/Add/Add.js'></script>
+  <script src='./scripts/components/Todo/Todo.js'></script>
+  <script src='./scripts/main.js'></script>
+</body>
+
+</html>
