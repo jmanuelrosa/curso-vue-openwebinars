@@ -68,6 +68,4 @@
     font-size: .8rem;
     text-transform: none;
   }
-
-
 </style>
