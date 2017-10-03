@@ -74,7 +74,7 @@ A new way to discover Github! Busca y encuentra al usuario que desees en Github,
 
 * __Testeando nuestros components__
   
-  30. [Karma, nuestro test runner](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/30-karma-nuestro-test-runner)
+  30. Karma, nuestro test runner
   31. [Test unitarios de nuestros componentes](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/31-test-unitarios-de-nuestros-componentes)
   32. [End-to-end con Nightwatch](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/32-end-to-end-con-nightwatch)
 
