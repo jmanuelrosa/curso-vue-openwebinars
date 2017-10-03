@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import CoDevelopers from '@/components/CoDevelopers'
 import CoProfile from '@/components/CoProfile'
+import CoNotFound from '@/components/CoNotFound'
 
 Vue.use(Router)
 
@@ -12,28 +13,26 @@ let router = new Router({
     {
       path: '/',
       name: 'home',
-      component: CoDevelopers,
-      beforeEnter (to, from, next) {
-        console.log('Hook beforeEnter en home')
-        next()
-      }
+      component: CoDevelopers
     },
     {
       path: '/profile/:user',
       name: 'profile',
       component: CoProfile,
       props: true
+    },
+    {
+      path: '/not-found',
+      name: '404',
+      component: CoNotFound
+    },
+    {
+      path: '*',
+      redirect: {
+        name: '404'
+      }
     }
   ]
-})
-
-router.beforeEach((to, from, next) => {
-  console.log('Hook beforeEach')
-  next()
-})
-
-router.afterEach((to, from) => {
-  console.log('Hook afterEach')
 })
 
 export default router

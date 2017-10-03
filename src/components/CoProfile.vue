@@ -103,21 +103,6 @@
             this.info = user
           })
       }
-    },
-    beforeRouteEnter (to, from, next) {
-      console.log('beforeRouteEnter CoProfile')
-
-      next()
-    },
-    beforeRouterUpdate (to, from, next) {
-      console.log('beforeRouterUpdate CoProfile')
-
-      next()
-    },
-    beforeRouteLeave (to, from, next) {
-      console.log('beforeRouteLeave CoProfile')
-
-      next()
     }
   }
 </script>
