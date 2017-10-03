@@ -6,12 +6,12 @@
       v-for='bookmark in list'
     )
       router-link.bookmark__link(
-        v-bind:to='{ name: "profile", params: { user: bookmark.login }}'
+        v-bind:to='{ name: "profile", params: { user: bookmark.id }}'
         title='Show me profile'
       )
         | {{ bookmark.name }}
         =' '
-        span.bookmark__small [{{ bookmark.login }}]
+        span.bookmark__small [{{ bookmark.id }}]
   p.bookmarks__empty(
     v-else
   ) You dont have any bookmark selected!
