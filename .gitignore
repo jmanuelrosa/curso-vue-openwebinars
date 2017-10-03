@@ -1,6 +1,8 @@
 # ENV files
 codit/config/dev.env.js
 codit/dist
+codit/test/e2e/reports
+codit/test/unit/coverage
 
 # Project Directories
 dist/
