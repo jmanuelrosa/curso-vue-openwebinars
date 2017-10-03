@@ -49,145 +49,142 @@
 </template>
 
 <script>
-import CoGoToHome from '@/components/CoGoToHome'
-import CoSocial from '@/components/CoSocial'
-import CoEvents from '@/components/CoEvents'
+  import CoGoToHome from '@/components/CoGoToHome'
+  import CoSocial from '@/components/CoSocial'
+  import CoEvents from '@/components/CoEvents'
 
-export default {
-  name: 'CoProfile',
-  props: {
-    user: {
-      type: String,
-      required: true
-    }
-  },
-  data() {
-    return {
-      info: {
-        followers: 0,
-        following: 0,
-        public_repos: 0,
-        public_gists: 0
+  export default {
+    name: 'CoProfile',
+    props: {
+      user: {
+        type: String,
+        required: true
       }
-    }
-  },
-  computed: {
-    avatar() {
+    },
+    data() {
       return {
-        backgroundImage: `url(${this.info.avatar_url})`
+        info: {
+          followers: 0,
+          following: 0,
+          public_repos: 0,
+          public_gists: 0
+        }
       }
     },
-    isSelected() {
-      return this.isBookmarked(this.info.login)
-    }
-  },
-  components: {
-    CoGoToHome,
-    CoStar,
-    CoSocial,
-    CoEvents
-  },
-  mounted() {
-    this.getUserData()
-  },
-  methods: {
-    getUserData() {
-      console.log('getUserData')
+    computed: {
+      avatar() {
+        return {
+          backgroundImage: `url(${this.info.avatar_url})`
+        }
+      },
+      isSelected() {
+        return this.isBookmarked(this.info.login)
+      }
     },
-    onBookmark() {
-      console.log('onBookmark')
+    components: {
+      CoGoToHome,
+      CoStar,
+      CoSocial,
+      CoEvents
+    },
+    mounted() {
+      this.getUserData()
+    },
+    methods: {
+      getUserData() {
+        console.log('getUserData')
+      }
     }
   }
-}
 </script>
 
 
 <style lang='css' scoped>
-@import '../assets/css/mixins.css';
-@import '../assets/css/colors.css';
+  @import '../assets/css/mixins.css';
+  @import '../assets/css/colors.css';
 
-.user {
-  @apply --flex-col;
-  flex: 1;
+  .user {
+    @apply --flex-col;
+    flex: 1;
 
-  position: relative;
-}
+    position: relative;
+  }
 
-.user__home,
-.user__bookmark,
-.user__followers {
-  position: absolute;
-  z-index: 2;
-}
+  .user__home,
+  .user__bookmark,
+  .user__followers {
+    position: absolute;
+    z-index: 2;
+  }
 
-.user__home {
-  top: 1rem;
-  left: 1rem;
-}
+  .user__home {
+    top: 1rem;
+    left: 1rem;
+  }
 
-.user__bookmark {
-  top: .5rem;
-  right: 1rem;
-}
+  .user__bookmark {
+    top: .5rem;
+    right: 1rem;
+  }
 
-.user__avatar {
-  height: 40%;
-  min-height: 155px;
+  .user__avatar {
+    height: 40%;
+    min-height: 155px;
 
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-  -webkit-clip-path: polygon(50% 100%, 100% 85%, 100% 0, 0 0, 0 85%);
-  clip-path: polygon(50% 100%, 100% 85%, 100% 0, 0 0, 0 85%);
-}
+    -webkit-clip-path: polygon(50% 100%, 100% 85%, 100% 0, 0 0, 0 85%);
+    clip-path: polygon(50% 100%, 100% 85%, 100% 0, 0 0, 0 85%);
+  }
 
 
-.user__social {
-  @apply --flex-row;
-  justify-content: space-around;
-  align-items: center;
+  .user__social {
+    @apply --flex-row;
+    justify-content: space-around;
+    align-items: center;
 
-  position: absolute;
-  top: 35%;
-  left: 0%;
+    position: absolute;
+    top: 35%;
+    left: 0%;
 
-  width: 100%;
-}
+    width: 100%;
+  }
 
-.user__profile {
-  margin-top: 2rem;
-  padding: 1rem 2rem;
+  .user__profile {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
 
-  & .user__title {
-    font-size: 2rem;
-    color: var(--color-black);
+    & .user__title {
+      font-size: 2rem;
+      color: var(--color-black);
 
-    & .user__login {
+      & .user__login {
+        font-size: .8rem;
+      }
+    }
+
+    & .user__headline {
       font-size: .8rem;
     }
   }
 
-  & .user__headline {
-    font-size: .8rem;
+  .user__contact {
+    @apply --flex-row;
+    justify-content: space-between;
+
+    margin-top: 1rem;
+
+    font-size: .7rem;
+
+    & .user__label {
+      font-weight: 700;
+    }
   }
-}
 
-.user__contact {
-  @apply --flex-row;
-  justify-content: space-between;
-
-  margin-top: 1rem;
-
-  font-size: .7rem;
-
-  & .user__label {
-    font-weight: 700;
+  .user__events {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
   }
-}
-
-.user__events {
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-}
 </style>
