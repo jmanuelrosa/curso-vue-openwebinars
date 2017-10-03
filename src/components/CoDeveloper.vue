@@ -1,6 +1,6 @@
 <template lang='html'>
   <div class='developer'>
-    <img class='developer__avatar'/>
+    <img v-bind:src='avatar' class='developer__avatar'/>
     <div class='developer__info'>
       <h2>
         <span class='developer__name'>{{ name }}</span>

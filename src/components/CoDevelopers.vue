@@ -1,13 +1,14 @@
 <template lang='html'>
   <ul class="developers">
-    <li class="developers__item">
+    <!-- <li class="developers__item" v-bind:class="{ 'userConNombre': user.name === false }"> -->
+    <li class="developers__item" v-bind:style="userConNombre">
       <co-developer
-        avatar='https://avatars2.githubusercontent.com/u/25254?v=4'
-        name='TJ Holowaychuk'
-        login='tj'
-        email='tj@apex.sh'
-        location='Victoria, BC, Canada'
-        company='Apex'
+        v-bind:avatar='user.avatar'
+        v-bind:name='user.name'
+        v-bind:login='user.login'
+        v-bind:email='user.email'
+        v-bind:location='user.location'
+        v-bind:company='user.company'
       ></co-developer>
     </li>
   </ul>
@@ -22,7 +23,21 @@
     name: 'CoDevelopers',
     data () {
       return {
-        users: []
+        users: [],
+        user: {
+          avatar: 'https://avatars2.githubusercontent.com/u/25254?v=4',
+          name: 'TJ Holowaychuk',
+          login: 'tj',
+          email: 'tj@apex.sh',
+          location: 'Victoria, BC, Canada',
+          company: 'Apex',
+          repos: 200,
+          gitst: 15
+        },
+        userConNombre: {
+          fontWeight: 900,
+          color: 'red'
+        }
       }
     },
     components: {
