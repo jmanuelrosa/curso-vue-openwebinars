@@ -22,7 +22,7 @@
 
   export default {
     name: 'CoBookmarks',
-    data () {
+    data() {
       return {
         list: mocks
       }
@@ -68,5 +68,4 @@
     font-size: .8rem;
     text-transform: none;
   }
-
 </style>
