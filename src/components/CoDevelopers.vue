@@ -39,5 +39,33 @@
   }
 </script>
 
-<style lang='css'>
+<style lang='css' scoped>
+  @import '../assets/css/colors.css';
+  @import '../assets/css/mixins.css';
+
+  .developers {
+    overflow-x: none;
+    overflow-y: auto;
+
+    & .developers__item {
+      position: relative;
+    }
+
+    & .developers__item::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 5%;
+
+      width: 90%;
+      height: 1px;
+
+      background-color: var(--color-light-grey);
+    }
+
+    & .developer {
+      padding: 1rem 2rem;
+    }
+  }
 </style>

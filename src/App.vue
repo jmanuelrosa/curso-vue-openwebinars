@@ -24,4 +24,9 @@
 </script>
 
 <style lang='css'>
+  @import 'assets/css/reset';
+  @import 'assets/css/global';
+</style>
+
+<style lang='css' scoped src='./App.css'>
 </style>

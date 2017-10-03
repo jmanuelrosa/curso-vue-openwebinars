@@ -82,5 +82,70 @@
   }
 </script>
 
-<style lang='css'>
+<style lang='css' scoped>
+  @import '../assets/css/colors.css';
+  @import '../assets/css/mixins.css';
+
+  .developer {
+    @apply --flex-row;
+
+    & .developer__avatar {
+      width: 4rem;
+      height: 4rem;
+
+      border-radius: 50%;
+    }
+
+    & .developer__info {
+      @apply --flex-col;
+      justify-content: space-around;
+      flex: 1;
+
+      margin: 0 1rem;
+    }
+
+    & .developer__name,
+    & .developer__login {
+      color: var(--color-black);
+    }
+
+    & .developer__login {
+      font-size: .7rem;
+    }
+
+    & .developer__name {
+      font-weight: 700;
+    }
+
+    & .developer__metadata {
+      font-size: .6rem;
+    }
+
+    & .developer__data::after {
+      content: ' -';
+    }
+
+    & .developer__data:last-child::after {
+      content: ''
+    }
+
+    & .developer__stats {
+      @apply --flex-col;
+
+      justify-content: center;
+    }
+
+    & .developer__stat {
+      @apply --flex-row;
+
+      font-size: .6rem;
+    }
+
+    & .developer__icon {
+      width: 1rem;
+      fill: var(--color-grey);
+      margin-right: .2rem;
+    }
+  }
+
 </style>
