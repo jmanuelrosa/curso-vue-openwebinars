@@ -27,7 +27,38 @@
 
 <script>
   export default {
-    name: 'CoDeveloper'
+    name: 'CoDeveloper',
+    props: {
+      avatar: {
+        type: String,
+        required: true,
+        validator (value) {
+          return value.starsWith('http')
+        },
+      },
+      name: {
+        type: String,
+        required: true,
+      },
+      login: {
+        type: String,
+        required: true,
+      },
+      email: {
+        type: String,
+        required: true
+      },
+      company: {
+        type: String,
+        required: false
+      },
+      respos: {
+        type: Number
+      },
+      gists: {
+        type: Number
+      }
+    }
   }
 </script>
 

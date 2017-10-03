@@ -9,6 +9,11 @@
 <script>
   export default {
     name: 'CoDevelopers',
+    data () {
+      return {
+        users: []
+      }
+    }
   }
 </script>
 
