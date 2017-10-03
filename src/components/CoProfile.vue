@@ -88,11 +88,15 @@
       CoSocial,
       CoEvents
     },
+    watch: {
+      '$route': 'getUserData'
+    },
     mounted () {
       this.getUserData()
     },
     methods: {
       getUserData () {
+        console.log('getUserData')
         return axios({
           method: 'GET',
           url: `${process.env.API}users/${this.user}`,

@@ -1,13 +1,20 @@
-<template lang='html'>
-  <div class="co-bookmarks">
-    <ul v-if='bookmarks.length' class="bookmarks">
-      <li v-for="bookmark in bookmarks" class="bookmarks__bookmark">
-        {{ bookmark.name }}
-        <span class="bookmark__small">[{{ bookmark.login }}]</span>
-      </li>
-    </ul>
-    <p v-else class="bookmarks__empty">You dont have any bookmark selected!</p>
-  </div>
+<template lang='pug'>
+  ul.bookmarks(
+    v-if='list.length'
+  )
+    li.bookmarks__bookmark(
+      v-for='bookmark in list'
+    )
+      router-link.bookmark__link(
+        v-bind:to='{ name: "profile", params: { user: bookmark.login }}'
+        title='Show me profile'
+      )
+        | {{ bookmark.name }}
+        =' '
+        span.bookmark__small [{{ bookmark.login }}]
+  p.bookmarks__empty(
+    v-else
+  ) You dont have any bookmark selected!
 </template>
 
 <script>
@@ -17,7 +24,7 @@
     name: 'CoBookmarks',
     data () {
       return {
-        bookmarks: mocks
+        list: mocks
       }
     }
   }
