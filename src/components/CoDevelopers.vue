@@ -1,7 +1,7 @@
 <template lang='html'>
   <ul class="developers">
     <li class="developers__item">
-      <co-developer></co-developer>
+      <!-- <co-developer></co-developer> -->
     </li>
   </ul>
 </template>
@@ -13,6 +13,9 @@
       return {
         users: []
       }
+    },
+    mounted () {
+      console.log('CoDeveloper mounted')
     }
   }
 </script>

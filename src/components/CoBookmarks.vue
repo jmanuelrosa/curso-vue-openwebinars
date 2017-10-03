@@ -1,10 +1,10 @@
 <template lang='html'>
-  <ul class='bookmarks'>
+  <!-- <ul class='bookmarks'>
     <li class='bookmarks__bookmark'>
       {{ bookmark.name }}
       <span class='bookmark__small'>[{{ bookmark.id }}]</span>
     </li>
-  </ul>
+  </ul> -->
 </template>
 
 <script>

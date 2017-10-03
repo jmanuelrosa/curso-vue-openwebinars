@@ -4,6 +4,7 @@
     type='text'
     placeholder='Write an user!'
     class='search'
+    v-model='criteria'
   />
 
 </template>
@@ -11,9 +12,14 @@
 <script>
   export default {
     name: 'CoSearch',
-    data() {
+    data () {
       return {
         criteria: ''
+      }
+    },
+    watch: {
+      criteria () {
+        this.$emit('search', this.criteria)
       }
     }
   }
