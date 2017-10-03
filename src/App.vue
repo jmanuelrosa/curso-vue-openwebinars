@@ -5,7 +5,6 @@
   import CoLogo from '@/components/CoLogo'
   import CoSearch from '@/components/CoSearch'
   import CoBookmarks from '@/components/CoBookmarks'
-  // import CoDevelopers from '@/components/CoDevelopers'
 
   export default {
     name: 'CoApp',

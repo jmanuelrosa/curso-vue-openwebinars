@@ -24,8 +24,6 @@ export default [
     'email': 'tj@apex.sh',
     'hireable': null,
     'bio': 'Founder of Apex\r\nhttps://apex.sh, a real company.\r\n@tjholowaychuk on Twitter & Medium.',
-    'public_repos': 269,
-    'public_gists': 542,
     'followers': 30722,
     'following': 48,
     'created_at': '2008-09-18T22:37:28Z',

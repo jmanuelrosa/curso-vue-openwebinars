@@ -4,7 +4,8 @@
     type='text'
     placeholder='Write an user!'
     class='search'
-    v-model='criteria'
+    v-on:keyup.enter='onSearch'
+    v-focus
   />
 
 </template>
@@ -19,8 +20,8 @@
         criteria: ''
       }
     },
-    watch: {
-      criteria () {
+    methods: {
+      onSearch () {
         // this.$emit('search', this.criteria)
         bus.$emit('search', this.criteria)
       }
