@@ -6,13 +6,17 @@ import CoProfile from '@/components/CoProfile'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   routes: [
     {
       path: '/',
       name: 'home',
-      component: CoDevelopers
+      component: CoDevelopers,
+      beforeEnter (to, from, next) {
+        console.log('Hook beforeEnter en home')
+        next()
+      }
     },
     {
       path: '/profile/:user',
@@ -22,3 +26,14 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  console.log('Hook beforeEach')
+  next()
+})
+
+router.afterEach((to, from) => {
+  console.log('Hook afterEach')
+})
+
+export default router
