@@ -10,20 +10,7 @@ new Vue({
           { name: 'VueJS', striked: true },
           { name: 'Vuex', striked: false },
           { name: 'Vue-router', striked: false },
-          { name: 'VueJS', striked: true },
-          { name: 'Vuex', striked: false },
-          { name: 'VueJS', striked: true },
-          { name: 'Vuex', striked: false },
-          { name: 'Vue-router', striked: false },
-          { name: 'VueJS', striked: true },
-          { name: 'Vuex', striked: false },
-          { name: 'VueJS', striked: true },
-          { name: 'Vuex', striked: false },
-          { name: 'Vue-router', striked: false },
-          { name: 'VueJS', striked: true },
-          { name: 'Vuex', striked: false },
-          { name: 'Vue-router', striked: false }
-        ]
+          { name: 'Vue-axios', striked: true }
       },
       {
         title: 'Recipes',

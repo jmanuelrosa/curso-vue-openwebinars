@@ -1,21 +1,9 @@
-# ENV files
-codit/dist
-codit/test/e2e/reports
-codit/test/unit/coverage
-
 # Project Directories
-dist/
-coverage
-test/unit/coverage
-test/e2e/reports
 
 # Logs
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-selenium-debug.log
 
 # Editor's files
 *.sublime-*
