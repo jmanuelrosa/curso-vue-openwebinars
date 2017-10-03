@@ -29,16 +29,16 @@
         type: String,
         required: true,
         validator (value) {
-          return value.starsWith('http')
-        },
+          return value.startsWith('http')
+        }
       },
       name: {
         type: String,
-        required: true,
+        required: true
       },
       login: {
         type: String,
-        required: true,
+        required: true
       },
       email: {
         type: String,
@@ -48,7 +48,7 @@
         type: String,
         required: false
       },
-      respos: {
+      repos: {
         type: Number
       },
       gists: {

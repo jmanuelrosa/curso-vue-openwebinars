@@ -1,10 +1,15 @@
 <template lang='html'>
-  <h1 class='logo'>Codit</h1>
+  <h1 class='logo'>{{ appName }}</h1>
 </template>
 
 <script>
   export default {
-    name: 'CoLogo'
+    name: 'CoLogo',
+    data () {
+      return {
+        appName: 'Codit'
+      }
+    }
   }
 </script>
 
