@@ -1,6 +1,6 @@
 <template lang='html'>
   <div class="co-bookmarks">
-    <ul v-if='!bookmarks.length' class="bookmarks">
+    <ul v-if='bookmarks.length' class="bookmarks">
       <li v-for="bookmark in bookmarks" class="bookmarks__bookmark">
         {{ bookmark.name }}
         <span class="bookmark__small">[{{ bookmark.login }}]</span>

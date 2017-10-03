@@ -42,7 +42,7 @@
       },
       email: {
         type: String,
-        required: true
+        required: false
       },
       location: {
         type: String,
