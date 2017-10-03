@@ -1,6 +1,6 @@
-# musicfy
+# codit
 
-> Discover and listen to the music you love!
+> A new way to discover github!
 
 ## Build Setup
 

@@ -1,7 +1,8 @@
 # ENV files
-codit/dist
-codit/test/e2e/reports
-codit/test/unit/coverage
+dist
+test/e2e/reports
+test/unit/coverage
+selenium-debug.log
 
 # Project Directories
 dist/
