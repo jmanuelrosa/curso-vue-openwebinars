@@ -89,9 +89,9 @@
       isBookmarked () {
         return this.isSelected(this.info.login)
       },
-      ...mapGetters([
-        'isSelected'
-      ])
+      ...mapGetters({
+        isSelected: 'bookmarkModule/isSelected'
+      })
     },
     components: {
       CoGoToHome,
@@ -119,10 +119,9 @@
           })
       },
       ...mapActions({
-        modifyBookmark: 'modify'
+        modifyBookmark: 'bookmarkModule/modify'
       }),
       onBookmark () {
-        debugger
         this.modifyBookmark({
           id: this.info.login,
           name: this.info.name

@@ -24,7 +24,7 @@
     name: 'CoBookmarks',
     computed: {
       ...mapGetters({
-        list: 'bookmarks'
+        list: 'bookmarkModule/bookmarks'
       })
     }
   }
