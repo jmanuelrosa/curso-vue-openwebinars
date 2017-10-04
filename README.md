@@ -17,17 +17,17 @@ Para el curso sobre [VueJS](https://vuejs.org/) es necesario tener instalado:
 
 ### Github Personal Token
 
-Aunque la [API de Github](https://developer.github.com/v3/) es totalmente abierta, tiene una serie de limitaciones a la hora de utilizarla y consiste en limitar el número de llamadas que podemos hacer a la API de forma totalmnete anónima. Para ello, beceistaremos crear nuestro Perosnal Access Token, que conseguiremos realizando estos sencillos pasos (es necesario tener cuenta en Github, es totalmente gratuito):
+Aunque la [API de Github](https://developer.github.com/v3/) es totalmente abierta, tiene una serie de limitaciones a la hora de utilizarla y consiste en limitar el número de llamadas que podemos hacer a la API de forma totalmnete anónima. Para ello, necesitaremos crear nuestro Personal Access Token, que conseguiremos realizando estos sencillos pasos (es necesario tener cuenta en Github, es totalmente gratuito):
 
-* Hacemos login en nuetsra cuenta de Github o creamos una cuenta nueva [aquí](https://github.com/)
+* Hacemos login en nuestra cuenta de Github o creamos una cuenta nueva [aquí](https://github.com/)
 * Accedemos a las __settings__ de nuestro usuario, concretamente, al apartado de __Perosonal access tokens__ en el bloque __Developer settings__ [aquí](https://github.com/settings/tokens)
 * Hacemos click en la opción __Generate new token__ y nos validamos como usuario con nuestra clave
-* Asignamos un nombre a nuetsro token, por ejemplo, *curso_vue*, y seleccionamos todos los scopes
-* Una vez seleccionado todo, hacemos click en el votón __Generate token__ que se encuentra en la parte inferior
+* Asignamos un nombre a nuestro token, por ejemplo, *curso_vue*, y seleccionamos todos los scopes
+* Una vez seleccionado todo, hacemos click en el botón __Generate token__ que se encuentra en la parte inferior
 * Veremos que se nos ha generado un token de este estilo _2f06c9e8578e92bdc9f2c64cb06b6e316f7bXXXX_
 * Copiamos este token, y lo pegamos en el fichero __dev.env.js__ que se encuentra en el directorio __config__ de la aplicación __codit__
 
-Con esto, podemos realiar más peiticiones a la API de Github, aunque seguiremos teniendo limitaciones, pero el número de peticiones que nos permite hacer la API con esta autenticación es suficiente para este curso
+Con esto, podemos realizar más peiticiones a la API de Github, aunque seguiremos teniendo limitaciones, pero el número de peticiones que nos permite hacer la API con esta autenticación es suficiente para este curso
 
 ## Proyectos
 
@@ -110,3 +110,9 @@ A new way to discover Github! Busca y encuentra al usuario que desees en Github,
   40. ¿Cómo lo implementariamos?
 
 * __Nuxt.js y otros frameworks__
+
+## Author
+* [José Manuel Rosa Moncayo](https://twitter.com/jmanuel_rosa)
+
+## License
+Este proyecto esta licenciado bajo licencia __MIT__, si desea saber más, visite el fichero LICENSE
