@@ -69,7 +69,7 @@
         required: true
       }
     },
-    data() {
+    data () {
       return {
         info: {
           followers: 0,
@@ -80,12 +80,12 @@
       }
     },
     computed: {
-      avatar() {
+      avatar () {
         return {
           backgroundImage: `url(${this.info.avatar_url})`
         }
       },
-      isBookmarked() {
+      isBookmarked () {
         console.log('isBookmarked')
       }
     },
@@ -98,11 +98,11 @@
     watch: {
       '$route': 'getUserData'
     },
-    mounted() {
+    mounted () {
       this.getUserData()
     },
     methods: {
-      getUserData() {
+      getUserData () {
         console.log('getUserData')
         return axios({
           method: 'GET',
@@ -114,7 +114,7 @@
             this.info = user
           })
       },
-      onBookmark() {
+      onBookmark () {
         console.log('isBookmarked')
       }
     }

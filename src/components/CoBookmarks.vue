@@ -22,7 +22,7 @@
 
   export default {
     name: 'CoBookmarks',
-    data() {
+    data () {
       return {
         list: mocks
       }
