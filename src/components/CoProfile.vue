@@ -2,6 +2,11 @@
   .user
     .user__home
       co-go-to-home
+    .user__bookmark
+      co-star(
+        v-bind:selected='isBookmarked'
+        v-on:star:clicked='onBookmark'
+      )
     .user__avatar(v-bind:style='avatar')
     .user__social
       co-social(
@@ -50,10 +55,12 @@
 
 <script>
   import axios from 'axios'
+  import { mapGetters, mapActions } from 'vuex'
 
   import CoGoToHome from '@/components/CoGoToHome'
   import CoSocial from '@/components/CoSocial'
   import CoEvents from '@/components/CoEvents'
+  import CoStar from '@/components/CoStar'
 
   export default {
     name: 'CoProfile',
@@ -79,14 +86,18 @@
           backgroundImage: `url(${this.info.avatar_url})`
         }
       },
-      isSelected () {
-        return this.isBookmarked(this.info.login)
-      }
+      isBookmarked () {
+        return this.isSelected(this.info.login)
+      },
+      ...mapGetters([
+        'isSelected'
+      ])
     },
     components: {
       CoGoToHome,
       CoSocial,
-      CoEvents
+      CoEvents,
+      CoStar
     },
     watch: {
       '$route': 'getUserData'
@@ -106,6 +117,16 @@
           .then(user => {
             this.info = user
           })
+      },
+      ...mapActions({
+        modifyBookmark: 'modify'
+      }),
+      onBookmark () {
+        debugger
+        this.modifyBookmark({
+          id: this.info.login,
+          name: this.info.name
+        })
       }
     }
   }

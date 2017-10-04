@@ -6,7 +6,7 @@
       v-for='bookmark in list'
     )
       router-link.bookmark__link(
-        v-bind:to='{ name: "profile", params: { user: bookmark.login }}'
+        v-bind:to='{ name: "profile", params: { user: bookmark.id }}'
         title='Show me profile'
       )
         | {{ bookmark.name }}
