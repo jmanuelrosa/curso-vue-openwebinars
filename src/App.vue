@@ -10,7 +10,7 @@
     name: 'CoApp',
     methods: {
       onSearch (searchCriteria) {
-        this.$router.push({ name: 'profile', params: { user: searchCriteria } })
+        console.log('Search ', searchCriteria)
       }
     },
     components: {

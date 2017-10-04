@@ -6,7 +6,7 @@
       v-for='bookmark in list'
     )
       router-link.bookmark__link(
-        v-bind:to='{ name: "profile", params: { user: bookmark.id }}'
+        v-bind:to='{ name: "profile", params: { user: bookmark.login }}'
         title='Show me profile'
       )
         | {{ bookmark.name }}
@@ -18,14 +18,14 @@
 </template>
 
 <script>
-  import mocks from '@/mocks/users.js'
+  import { mapGetters } from 'vuex'
 
   export default {
     name: 'CoBookmarks',
-    data () {
-      return {
-        list: mocks
-      }
+    computed: {
+      ...mapGetters({
+        list: 'bookmarks'
+      })
     }
   }
 </script>
@@ -68,4 +68,5 @@
     font-size: .8rem;
     text-transform: none;
   }
+
 </style>
