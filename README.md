@@ -80,19 +80,19 @@ A new way to discover Github! Busca y encuentra al usuario que desees en Github,
 
 * __Flux mediante Vuex__
   
-  33. [Introducción al patrón Flux](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/33-introduccion-al-patron-flux)
-  34. [¿Vuex?](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/34-vuex)
+  33. Introducción al patrón Flux
+  34. ¿Vuex?
   35. [State y Getters](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/35-state-y-getters)
   36. [Mutaciones y Acciones](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/36-mutaciones-y-acciones)
   37. [Módulos y organización](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/37-modulos-y-organizacion)
 
 * __Producción__
   
-  38. [Vamos a generar nuestro build !](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/38-vamos-a-generar-nuestro-build)
+  38. Vamos a generar nuestro build !
 
 * __Solucionando el SEO desde el servidor__
   
-  39. [¿Que es SSR y porque es necesario?](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/39-que-es-ssr-y-porque-es-necesario)
-  40. [Implementación](https://github.com/jmanuelrosa/curso-vue-openwebinars/tree/40-implementacion)
+  39. ¿Que es SSR y porque es necesario?
+  40. ¿Cómo lo implementariamos?
 
 * __Nuxt.js y otros frameworks__
