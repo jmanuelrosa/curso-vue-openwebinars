@@ -15,6 +15,20 @@ Para el curso sobre [VueJS](https://vuejs.org/) es necesario tener instalado:
 | __npm__      | >= 5.3.0 |
 | __yarn__     | >= 1.0.1 |
 
+### Github Personal Token
+
+Aunque la [API de Github](https://developer.github.com/v3/) es totalmente abierta, tiene una serie de limitaciones a la hora de utilizarla y consiste en limitar el número de llamadas que podemos hacer a la API de forma totalmnete anónima. Para ello, beceistaremos crear nuestro Perosnal Access Token, que conseguiremos realizando estos sencillos pasos (es necesario tener cuenta en Github, es totalmente gratuito):
+
+* Hacemos login en nuetsra cuenta de Github o creamos una cuenta nueva [aquí](https://github.com/)
+* Accedemos a las __settings__ de nuestro usuario, concretamente, al apartado de __Perosonal access tokens__ en el bloque __Developer settings__ [aquí](https://github.com/settings/tokens)
+* Hacemos click en la opción __Generate new token__ y nos validamos como usuario con nuestra clave
+* Asignamos un nombre a nuetsro token, por ejemplo, *curso_vue*, y seleccionamos todos los scopes
+* Una vez seleccionado todo, hacemos click en el votón __Generate token__ que se encuentra en la parte inferior
+* Veremos que se nos ha generado un token de este estilo _2f06c9e8578e92bdc9f2c64cb06b6e316f7bXXXX_
+* Copiamos este token, y lo pegamos en el fichero __dev.env.js__ que se encuentra en el directorio __config__ de la aplicación __codit__
+
+Con esto, podemos realiar más peiticiones a la API de Github, aunque seguiremos teniendo limitaciones, pero el número de peticiones que nos permite hacer la API con esta autenticación es suficiente para este curso
+
 ## Proyectos
 
 ### __My-Tasks__
