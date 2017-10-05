@@ -2,9 +2,7 @@
   <div class='codit'>
     <div class='container'>
       <nav class='menu'>
-        <co-search
-          v-on:search='onSearch'
-        ></co-search>
+        <co-search></co-search>
         <co-bookmarks></co-bookmarks>
       </nav>
       <main class='content'>
@@ -25,11 +23,6 @@
 
   export default {
     name: 'CoApp',
-    methods: {
-      onSearch (searchCriteria) {
-        console.log('Search ', searchCriteria)
-      }
-    },
     components: {
       CoLogo,
       CoSearch,
