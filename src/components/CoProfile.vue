@@ -122,7 +122,6 @@
         modifyBookmark: 'modify'
       }),
       onBookmark () {
-        debugger
         this.modifyBookmark({
           id: this.info.login,
           name: this.info.name
