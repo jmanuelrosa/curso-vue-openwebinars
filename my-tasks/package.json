@@ -30,7 +30,7 @@
     "start": "serve ."
   },
   "dependencies": {
-    "serve": "^6.0.6"
+    "serve": "^10.1.2"
   },
   "devDependencies": {}
 }
